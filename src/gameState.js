@@ -143,7 +143,6 @@ const gameState = {
     if (this.current !== "POOPING") {
       return;
     }
-
     this.dieTime = -1;
     togglePoopBag(true);
     this.startCelebrating();
