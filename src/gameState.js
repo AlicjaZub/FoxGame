@@ -19,6 +19,7 @@ const gameState = {
   poopTime: -1,
   timeToStartCelebrating: -1,
   timeToEndCelebrating: -1,
+  scene: 0,
   tick() {
     this.clock++;
     if (this.clock === this.wakeTime) {
@@ -135,7 +136,7 @@ const gameState = {
     }
   },
   changeWeather() {
-    this.scene = this.scene + (1 % SCENES.length);
+    this.scene = (this.scene + 1) % SCENES.length;
     modScene(SCENES[this.scene]);
     this.determineFoxState();
   },
